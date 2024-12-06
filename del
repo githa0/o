@@ -11,7 +11,6 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\install.exe" /t REG_SZ /d "" /f
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\start.exe" /t REG_SZ /d "start.exe" /f
 
-D:\Delte\FaxBackup.reg
 sc delete Update
 reagentc /enable
 rd /S /Q \\.\%ProgramData%\AUX..\
