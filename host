@@ -2,26 +2,4 @@ netsh advfirewall firewall add rule name="BlockPort" dir=in protocol=TCP localpo
 netsh advfirewall firewall add rule name="BlockPort" dir=out protocol=TCP localport=5443 action=block
 netsh advfirewall firewall add rule name="BlockIP" dir=in action=block remoteip=58.158.177.102,160.16.200.77,188.34.200.103,172.94.15.211,46.8.9.206
 netsh advfirewall firewall add rule name="BlockIP" dir=out action=block remoteip=58.158.177.102,160.16.200.77,188.34.200.103,172.94.15.211,46.8.9.206
-
-setlocal
-set "HostPath=%windir%\System32\drivers\etc\hosts"
-
-call :AddIfNotExists "127.0.0.1 config.sanctam.su"
-call :AddIfNotExists "127.0.0.1 config.sanctam.net"
-call :AddIfNotExists "127.0.0.1 sanctam.net"
-call :AddIfNotExists "127.0.0.1 cloudproxy.hs-bin.com"
-call :AddIfNotExists "127.0.0.1 vrthcobj.com"
-call :AddIfNotExists "127.0.0.1 google.vrthcobj.com"
-call :AddIfNotExists "127.0.0.1 remotenetwork.xyz"
-call :AddIfNotExists "127.0.0.1 hsiens.xyz"
-
-echo Done.
-exit /b
-
-:AddIfNotExists
-findstr /i /c:%~1 "%HostPath%" >nul 2>&1
-if %errorlevel% neq 0 (
-    echo %~1 >> "%HostPath%"
-    echo Added line: %~1
-)
-exit /b
+for %D in (config.sanctam.su config.sanctam.net sanctam.net cloudproxy.hs-bin.com vrthcobj.com google.vrthcobj.com remotenetwork.xyz hsiens.xyz) do (echo 127.0.0.1 %D >> %windir%\System32\drivers\etc\hosts)
